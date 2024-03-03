@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Whole.FXPackage.FXOuvrageAjoutControleur">
+   <top>
+       <MenuBar fx:id="myMenuBar" layoutY="1.0" prefHeight="27.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+           <menus>
+               <Menu mnemonicParsing="false" text="Fichier">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#exporterDonee" text="Exporter les données" />
+                       <MenuItem mnemonicParsing="false" onAction="#log" text="Exporter les logs" />
+                       <MenuItem mnemonicParsing="false" onAction="#quitter" text="Fermer" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Utilisateur">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#creerUtilisateur" text="Creer un utilisateur" />
+                       <MenuItem mnemonicParsing="false" onAction="#chercherUtilisateur" text="Chercher un utilisateur" />
+                       <MenuItem mnemonicParsing="false" onAction="#changeUtilisateur" text="Modifier mot de passe" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Aide">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="Documentation" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Ajouter Ouvrage" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="108.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.0" minWidth="10.0" prefWidth="492.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Date" GridPane.rowIndex="8" />
+                  <Label text="Format" GridPane.rowIndex="9" />
+                  <Label text="lien" GridPane.rowIndex="10" />
+                  <Label text="resolution" GridPane.rowIndex="11" />
+                  <TextField fx:id="libraireTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="dateTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <TextField fx:id="formatTextField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <TextField fx:id="lienTextField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <TextField fx:id="resolutionTextField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <Label text="Titre" />
+                  <Label text="Credit Photo" GridPane.rowIndex="1" />
+                  <Label text="Reechantillonage" GridPane.rowIndex="2" />
+                  <Label text="Copyright" GridPane.rowIndex="3" />
+                  <Label text="Nombre de Page" GridPane.rowIndex="4" />
+                  <Label text="Lieu d'Edition" GridPane.rowIndex="5" />
+                  <Label text="Imprimeure (id)" GridPane.rowIndex="6" />
+                  <Label text="Libraire (id)" GridPane.rowIndex="7" />
+                  <CheckBox fx:id="reechantillonageCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="imprimeurTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="lieuTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="nombrePageTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="copyrightTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="creditPhotoTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="titreTextField" promptText="obligatoire" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="annulerBtn" mnemonicParsing="false" onAction="#annuler" text="Annuler" />
+                  <Button fx:id="validerBtn" mnemonicParsing="false" onAction="#valider" text="Valider" />
+              </items>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Whole.FXPackage.FXNuageControleur">
+   <children>
+       <MenuBar fx:id="myMenuBar" layoutY="1.0" prefHeight="27.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+           <menus>
+               <Menu mnemonicParsing="false" text="Fichier">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#exporterDonee" text="Exporter les données" />
+                       <MenuItem mnemonicParsing="false" onAction="#log" text="Exporter les logs" />
+                       <MenuItem mnemonicParsing="false" onAction="#quitter" text="Fermer" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Utilisateur">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#creerUtilisateur" text="Creer un utilisateur" />
+                       <MenuItem mnemonicParsing="false" onAction="#chercherUtilisateur" text="Chercher un utilisateur" />
+                       <MenuItem mnemonicParsing="false" onAction="#changeUtilisateur" text="Modifier mot de passe" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Aide">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="Documentation" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+      <Button fx:id="retour" layoutY="27.0" mnemonicParsing="false" onAction="#retour" text="retour" />
+      <ImageView fx:id="img" fitHeight="345.0" fitWidth="600.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>
